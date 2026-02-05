@@ -1,5 +1,5 @@
 <footer>
-      <a href="./index.html"
+      <a href="/"
         ><img src="./images/logo.png" alt="logo" title="logo"/></a>
       <div class="ft-wrap">
         <div class="ft-top">
@@ -56,3 +56,5 @@
         </div>
       </div>
     </footer>
+    </body>
+    </html>

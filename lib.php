@@ -22,7 +22,7 @@ function back($a = null) {
 
 function views($page, $data = [], $n = true) {
   extract($data);
-    require_once "./views/templates/header.php";
-    require_once "./views/$page.php";
-    require_once "./views/templates/footer.php";
+    require_once "../views/templates/header.php";
+    require_once "../views/$page.php";
+    require_once "../views/templates/footer.php";
 }

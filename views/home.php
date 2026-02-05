@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>main</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/main.css" />
-    <link
-      rel="stylesheet"
-      href="./[웹디자인 및 개발] 2025 지방기능경기대회 선수제공파일/공통/fontawesome/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="./css/product.css" />
-  </head>
-  <body>
+
     <!-- 로딩 -->
     <div class="loadingCon">
     <div class="loading"></div>
   </div>
     <!-- 헤더 -->
-        <?php require_once 'header.php' ?>
+ 
     <!-- 슬라이드 -->
     <div class="slider">
       <div class="slide">
@@ -555,5 +541,3 @@
         </div>
       </div>
     </footer>
-  </body>
-</html>

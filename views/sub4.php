@@ -15,7 +15,6 @@
 </head>
 <body>
   <!-- 헤더 -->
-  <?php require_once 'header.php' ?>
 
     <main>
       <!-- 장바구니 -->
@@ -56,7 +55,3 @@
         </div>
       </div>
     </main>
-    <!-- 푸터 -->
-  <?php require_once "footer.php"; ?>
-</body>
-</html>
