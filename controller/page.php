@@ -24,8 +24,16 @@ get('/sub4', function() {
     views("sub4"); 
 });
 get('/signIn', function() { 
-    views("signIn"); 
+    views("user/signIn"); 
 });
 get('/signUp', function() { 
-    views("signUp"); 
+    views("user/signUp"); 
+});
+
+post('/signup', function() {
+    extract($_POST);
+    if(DB::fetch("select * from user where id = '$id'")) {
+        
+    }
+
 });
