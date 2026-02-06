@@ -7,9 +7,11 @@ function ss() {
 function script($s) {
   echo "<script>$s</script>";
 }
+
 function alert($a) {
-  script("alert($a)");
+  script("alert('$a')");
 }
+
 function move($m, $a = null) {
   if($a) alert($a);
   script("location.href = '$m'");
@@ -20,7 +22,7 @@ function back($a = null) {
   script("history.back()");
 }
 
-function views($page, $data = [], $n = true) {
+function views($page, $data = []) {
   extract($data);
     require_once "../views/templates/header.php";
     require_once "../views/$page.php";

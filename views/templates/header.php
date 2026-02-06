@@ -17,41 +17,63 @@
 
 <body>
   <header>
-    <a href="/"><img src="./images/logo.png" alt="logo" title="logo" /></a>
-    <div class="dropdown">
-      <ul>
-        <a href="/sub1">소개</a>
-        <ul class="drop">
-          <li><a href="#">-</a></li>
-          <li><a href="#">-</a></li>
+    <div class="header-con">
+      <a href="/"><img src="./images/logo.png" alt="logo" title="logo" /></a>
+      <div class="dropdown">
+        <ul>
+          <a href="/sub1">소개</a>
+          <ul class="drop">
+            <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li>
+          </ul>
         </ul>
-      </ul>
-      <ul>
-        <a href="/sub2">전체상품</a>
-        <ul class="drop">
-          <li><a href="/sub2">판매상품</a></li>
-          <li><a href="/sub3">인기상품</a></li>
+        <ul>
+          <a href="/sub2">전체상품</a>
+          <ul class="drop">
+            <li><a href="/sub2">판매상품</a></li>
+            <li><a href="/sub3">인기상품</a></li>
+          </ul>
         </ul>
-      </ul>
-      <ul>
-        <a href="#">가맹점</a>
-        <ul class="drop">
-          <li><a href="#">-</a></li>
-          <li><a href="#">-</a></li>
+        <ul>
+          <a href="#">가맹점</a>
+          <ul class="drop">
+            <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li>
+          </ul>
         </ul>
-      </ul>
-      <ul>
-        <a href="/sub4">장바구니</a>
-        <ul class="drop">
-          <li><a href="#">-</a></li>
-          <li><a href="#">-</a></li>
+        <ul>
+          <a href="/sub4">장바구니</a>
+          <ul class="drop">
+            <li><a href="#">-</a></li>
+            <li><a href="#">-</a></li>
+          </ul>
         </ul>
-      </ul>
-    </div>
-    <div class="hdabox">
-      <a href="#">장바구니</a>
-      <a href="#">관리자</a>
-      <a href="/signIn">로그인</a>
-      <a href="/signUp">회원가입</a>
+      </div>
+      <div class="hdabox">
+        <a href="#">장바구니</a>
+        <?php if (!ss()) { ?>
+          <a href="/signIn">로그인</a>
+          <a href="/signUp">회원가입</a>
+        <?php } ?>
+        <?php if (ss()) { ?>
+          <a href="/logout">로그아웃</a>
+        <?php } ?>
+        <?php if(ss() && ss()['id'] === 'admin') { ?>
+          <div class="dropdown">
+            <ul>
+              <a href="/admin">관리자</a>
+              <ul class="drop">
+                <li><a href="#">공지사항관리</a></li>
+                <li><a href="#">판매상품관리</a></li>
+              </ul>
+            </ul>
+          </div>
+        <?php } ?>
+           <div style="display: flex;align-items:center;">
+      <?php if (ss()) { ?>
+        <h4><?= ss()['name'] ?></h4>로 로그인됨
+      <?php } ?>
+      </div>
+   
     </div>
   </header>

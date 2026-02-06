@@ -33,7 +33,6 @@
   display: flex;
   position: relative;
   overflow: hidden;
-  gap: 10px;
 }
 .gallery>div{
   position: relative;

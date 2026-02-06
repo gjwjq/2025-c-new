@@ -128,9 +128,12 @@ table{
 }
 
 th, td{
-  border: 1px solid black;
   padding: 10px 20px;
   text-align: center;
+}
+td{
+  border-bottom: 1.5px solid #ccc;
+
 }
 tr th:nth-child(1) {
   width: 200px;
@@ -143,24 +146,6 @@ tr th:nth-child(3) {
 }
 th{
   background-color: #ffd400;
-}
-tbody tr:nth-child(1):hover {
-  background-color: #ffd5007e;
-}
-tbody tr:nth-child(2):hover {
-  background-color: #afafaf7e;
-}
-tbody tr:nth-child(3):hover {
-  background-color: #ffd5007e;
-}
-tbody tr:nth-child(4):hover {
-  background-color: #afafaf7e;
-}
-tbody tr:nth-child(5):hover {
-  background-color: #ffd5007e;
-}
-tbody tr:nth-child(6):hover {
-  background-color: #afafaf7e;
 }
 
 /* 상품입점/제휴문의 */

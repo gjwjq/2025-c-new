@@ -352,48 +352,28 @@
     </main>
     <!-- 공지사항 -->
     <main>
+      <?php 
+        $notices = db::fetchAll("select * from notice");
+      ?>
       <div class="main-title">NOTICE</div>
-      <table>
-        <thead>
-          <tr>
-            <th>유형</th>
-            <th>제목</th>
-            <th>공지일자</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>이벤트</td>
-            <td>24년 7월 &lt;헬스+출석체크인> 이벤트 당첨자 공지</td>
-            <td>2024.08.08</td>
-          </tr>
-          <tr>
-            <td>이벤트</td>
-            <td>7월 [기프트몰TV 보러갈래?] 이벤트 당첨자 발표</td>
-            <td>2024.08.07</td>
-          </tr>
-          <tr>
-            <td>일반</td>
-            <td>[배송안내] 8/14(수)~8/15(목) 택배사 휴무 관련</td>
-            <td>2024.08.06</td>
-          </tr>
-          <tr>
-            <td>일반</td>
-            <td>하월곡점 폐점으로 인한 영업종료 안내</td>
-            <td>2024.07.31</td>
-          </tr>
-          <tr>
-            <td>일반</td>
-            <td>양평점 리로케이션으로 인한 영업 중단 안내</td>
-            <td>2024.07.31</td>
-          </tr>
-          <tr>
-            <td>이벤트</td>
-            <td>[기프트몰라이브 - 기프트몰마켓]이벤트 당첨자 발표</td>
-            <td>2024.07.30</td>
-          </tr>
-        </tbody>
-      </table>
+      <ul class="noti-table">
+        <li>
+          <div class="w200">유형</div>
+          <div class="w1000">제목</div>
+          <div class="w200">공지일자</div>
+        </li>
+        <ul class="notiWrap">
+          <div class="slideWrap">
+          <?php foreach($notices as $n) { ?>
+            <li idx="<?= $value['idx'] ?>" type="<?= $value['type'] ?>" date="<?= $value['date'] ?>">
+              <div class="w200"><?= $n['type'] ?></div>
+              <div class="w1000"><?= $n['des'] ?></div>
+              <div class="w200"><?= $n['date'] ?></div>
+            </li>
+          <?php } ?>
+        </div>
+      </ul>
+      </ul>
       <div
         class="table-move"
         style="
@@ -403,9 +383,9 @@
           align-items: center;
         "
       >
-        <i class="fa fa-3x fa-arrow-left" style="cursor: pointer"></i>
-        <span style="text-align: center">1/6</span>
-        <i class="fa fa-3x fa-arrow-right" style="cursor: pointer"></i>
+        <i class="fa fa-3x fa-arrow-left leftB" style="cursor: pointer"></i>
+        <span style="text-align: center" class="notiNum">1</span>
+        <i class="fa fa-3x fa-arrow-right rightB" style="cursor: pointer"></i>
       </div>
     </main>
     <!-- 상품입점/제휴문의 -->
@@ -482,4 +462,4 @@
       </div>
     </main>
     <!-- 푸터 -->
-   
+    <script src="./js/home.js"></script>
