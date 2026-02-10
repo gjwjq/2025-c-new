@@ -7,7 +7,7 @@ get('/sub1', function() {
 });
 
 get('/sub2', function() { 
-    views("sub2"); 
+views("sub2"); 
 });
 
 get('/sub3', function() { 
@@ -34,8 +34,15 @@ get('/logout', function() {
     move("/", '로그아웃 되엇습니다.');
 });
 
+get('/itemAdmin', function() {
+    views("admin/itemAdmin");
+});
+
 get('/admin', function() {
     views("admin/admin");
+});
+get('/itemtable', function() {
+    views("add-table/iamitemtable");
 });
 
 post('/signUp', function() {
@@ -69,3 +76,4 @@ post('/signIn', function(){
         back("아이디가 존재하지 않습니다.");
     }
 });
+

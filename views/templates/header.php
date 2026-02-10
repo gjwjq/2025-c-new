@@ -64,7 +64,7 @@
               <a href="/admin">관리자</a>
               <ul class="drop">
                 <li><a href="#">공지사항관리</a></li>
-                <li><a href="#">판매상품관리</a></li>
+                <li><a href="/itemAdmin">판매상품관리</a></li>
               </ul>
             </ul>
           </div>
