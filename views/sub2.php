@@ -50,7 +50,7 @@
         <div class="mp-title"><?= $cate ?></div>
 
         <?php 
-          $items = db::fetchAll("select * from item where cate = '$cate'");
+          $items = db::fetchAll("select * from item where cate = '$cate' order by pop desc");
           foreach ($items as $item) {
         ?>
         <div class="product">
@@ -62,9 +62,9 @@
             <div class="pro-des"><?= $item['des'] ?></div>
             <div class="pro-price">가격 : 
               <?php if($item['pop'] === '1') { ?>
-              <span style="color: #ccc;text-decoration:line-through;"><?= $item[''] ?></span>
+              <span style="color: #ccc;text-decoration:line-through;"><?= $item['price'] ?></span> <span class="tolosc" style="font-weight: 500;color:red;"><?= $item['dis'] ?>원</span>
               <?php } else {?>
-
+              <span ><?= $item['price'] ?>원</span>
               <?php } ?>
             </div>
           </div>
@@ -111,3 +111,7 @@
    
 
 <script src="./js/sub2.js"></script>
+<script>
+  const tolosc = document.querySelector('.tolosc');
+  tolosc.textContent.toLocaleString();
+</script>
